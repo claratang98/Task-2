@@ -28,8 +28,8 @@ namespace producer
         // This method gets called by the runtime. Use this method to add services to the container.
         public void ConfigureServices(IServiceCollection services)
         {
-            services.AddDbContext<TaskContext>(opt =>
-                                               opt.UseInMemoryDatabase("TaskList"));
+            services.AddDbContext<BpiContext>(opt =>
+                                               opt.UseInMemoryDatabase("BpiList"));
             services.AddControllers();
             services.AddSwaggerGen(c =>
             {
