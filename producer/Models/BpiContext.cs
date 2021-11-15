@@ -1,15 +1,17 @@
-﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore;
 using System.Diagnostics.CodeAnalysis;
+using producer.Models;
+using producer.Controllers;
 
 namespace producer.Models
 {
-    public class TaskContext : DbContext
+    public class BpiContext : DbContext
     {
-        public TaskContext(DbContextOptions<TaskContext> options)
+        public BpiContext(DbContextOptions<BpiContext> options)
             : base(options)
         {
         }
 
-        public DbSet<TaskItem> TaskItems { get; set; } = null!;
+        public DbSet<BpiItem> BpiItems { get; set; } = null!;
     }
 }
